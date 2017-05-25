@@ -1,0 +1,768 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Mesa WordPress Theme\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-29 15:50-0800\n"
+"PO-Revision-Date: 2016-04-29 15:50-0800\n"
+"Last-Translator: AJ Clarke <wpexplorer@gmail.com>\n"
+"Language-Team: WPExplorer.com\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: esc_html_e;gettext;gettext_noop;__;_e;_n;_nx;"
+"esc_html__\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.5.5\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../comments.php:32 ../partials/entry/meta.php:89
+#: ../partials/post/meta.php:94
+msgid "0 Comments"
+msgstr ""
+
+#: ../comments.php:32 ../partials/entry/meta.php:89
+#: ../partials/post/meta.php:94
+msgid "1 Comment"
+msgstr ""
+
+#: ../comments.php:32
+msgid "Comments"
+msgstr ""
+
+#: ../comments.php:50
+msgid "Comment navigation"
+msgstr ""
+
+#: ../comments.php:54
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../comments.php:57
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../comments.php:72
+msgid "Comments are now closed."
+msgstr ""
+
+#: ../functions.php:156
+msgid "Main"
+msgstr ""
+
+#: ../functions.php:281
+msgid "Menu"
+msgstr ""
+
+#: ../functions.php:298
+msgid "Sidebar - Main"
+msgstr ""
+
+#: ../functions.php:308
+msgid "Sidebar - Pages"
+msgstr ""
+
+#: ../functions.php:441
+msgid "Highlight"
+msgstr ""
+
+#: ../functions.php:446
+msgid "Buttons"
+msgstr ""
+
+#: ../functions.php:449 ../functions.php:494 ../inc/core-functions.php:54
+#: ../inc/customizer-config.php:25 ../inc/customizer-config.php:34
+#: ../inc/meta-pages.php:82
+msgid "Default"
+msgstr ""
+
+#: ../functions.php:454
+msgid "Red"
+msgstr ""
+
+#: ../functions.php:459
+msgid "Green"
+msgstr ""
+
+#: ../functions.php:464
+msgid "Blue"
+msgstr ""
+
+#: ../functions.php:469
+msgid "Orange"
+msgstr ""
+
+#: ../functions.php:474
+msgid "Black"
+msgstr ""
+
+#: ../functions.php:479
+msgid "White"
+msgstr ""
+
+#: ../functions.php:484
+msgid "Clean"
+msgstr ""
+
+#: ../functions.php:491
+msgid "Notices"
+msgstr ""
+
+#: ../functions.php:499
+msgid "Info"
+msgstr ""
+
+#: ../functions.php:504
+msgid "Warning"
+msgstr ""
+
+#: ../functions.php:509
+msgid "Success"
+msgstr ""
+
+#: ../searchform.php:13
+msgid "Search"
+msgstr ""
+
+#: ../inc/core-functions.php:55
+msgid "False"
+msgstr ""
+
+#: ../inc/core-functions.php:56
+msgid "Top Left"
+msgstr ""
+
+#: ../inc/core-functions.php:57
+msgid "Top Right"
+msgstr ""
+
+#: ../inc/core-functions.php:58
+msgid "Top Center"
+msgstr ""
+
+#: ../inc/core-functions.php:59
+msgid "Center Left"
+msgstr ""
+
+#: ../inc/core-functions.php:60
+msgid "Center Right"
+msgstr ""
+
+#: ../inc/core-functions.php:61
+msgid "Center Center"
+msgstr ""
+
+#: ../inc/core-functions.php:62
+msgid "Bottom Left"
+msgstr ""
+
+#: ../inc/core-functions.php:63
+msgid "Bottom Right"
+msgstr ""
+
+#: ../inc/core-functions.php:64
+msgid "Bottom Center"
+msgstr ""
+
+#: ../inc/core-functions.php:423
+msgid "Pingback:"
+msgstr ""
+
+#: ../inc/core-functions.php:450
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../inc/core-functions.php:460
+msgid "Reply"
+msgstr ""
+
+#: ../inc/core-functions.php:466
+msgid "Edit"
+msgstr ""
+
+#: ../inc/core-functions.php:512
+msgid "read more"
+msgstr ""
+
+#: ../inc/core-functions.php:750
+msgid "Email"
+msgstr ""
+
+#: ../inc/customizer-config.php:35 ../inc/meta-pages.php:83
+msgid "Right Sidebar"
+msgstr ""
+
+#: ../inc/customizer-config.php:36 ../inc/meta-pages.php:84
+msgid "Left Sidebar"
+msgstr ""
+
+#: ../inc/customizer-config.php:37 ../inc/meta-pages.php:85
+msgid "No Sidebar"
+msgstr ""
+
+#: ../inc/customizer-config.php:44
+msgid "General Theme Settings"
+msgstr ""
+
+#: ../inc/customizer-config.php:51
+msgid "Layouts"
+msgstr ""
+
+#: ../inc/customizer-config.php:58
+msgid "Homepage Layout"
+msgstr ""
+
+#: ../inc/customizer-config.php:68
+msgid "Archives Layout"
+msgstr ""
+
+#: ../inc/customizer-config.php:71
+msgid "Categories, tags, author...etc"
+msgstr ""
+
+#: ../inc/customizer-config.php:79
+msgid "Search Layout"
+msgstr ""
+
+#: ../inc/customizer-config.php:89
+msgid "Post Layout"
+msgstr ""
+
+#: ../inc/customizer-config.php:99
+msgid "Page Layout"
+msgstr ""
+
+#: ../inc/customizer-config.php:110
+msgid "Responsiveness"
+msgstr ""
+
+#: ../inc/customizer-config.php:117
+msgid "Enable"
+msgstr ""
+
+#: ../inc/customizer-config.php:127
+msgid "Header"
+msgstr ""
+
+#: ../inc/customizer-config.php:134
+msgid "Display description?"
+msgstr ""
+
+#: ../inc/customizer-config.php:142
+msgid "Custom Logo"
+msgstr ""
+
+#: ../inc/customizer-config.php:150
+msgid "Custom Retina Logo"
+msgstr ""
+
+#: ../inc/customizer-config.php:158
+msgid "Standard Logo Height"
+msgstr ""
+
+#: ../inc/customizer-config.php:159
+msgid ""
+"Enter the standard height for your logo. Used to set your retina logo to the "
+"correct dimensions"
+msgstr ""
+
+#: ../inc/customizer-config.php:172
+msgid "Social"
+msgstr ""
+
+#: ../inc/customizer-config.php:173
+msgid "Enter the full URL to your social media profile."
+msgstr ""
+
+#: ../inc/customizer-config.php:180
+msgid "Enable Social"
+msgstr ""
+
+#: ../inc/customizer-config.php:191
+msgid "Open Social Links In New Tab?"
+msgstr ""
+
+#: ../inc/customizer-config.php:202
+msgid "URL"
+msgstr ""
+
+#: ../inc/customizer-config.php:214 ../inc/customizer-config.php:578
+msgid "Entries"
+msgstr ""
+
+#: ../inc/customizer-config.php:221
+msgid "Display First Post Large?"
+msgstr ""
+
+#: ../inc/customizer-config.php:230
+msgid "Pagination Style"
+msgstr ""
+
+#: ../inc/customizer-config.php:233
+msgid "Numbered"
+msgstr ""
+
+#: ../inc/customizer-config.php:234
+msgid "Next/Prev Links"
+msgstr ""
+
+#: ../inc/customizer-config.php:243
+msgid "Grid Columns"
+msgstr ""
+
+#: ../inc/customizer-config.php:258
+msgid "Entry Displays?"
+msgstr ""
+
+#: ../inc/customizer-config.php:261
+msgid "Custom Excerpt"
+msgstr ""
+
+#: ../inc/customizer-config.php:262
+msgid "Full Content"
+msgstr ""
+
+#: ../inc/customizer-config.php:271
+msgid "Entry Excerpt Length"
+msgstr ""
+
+#: ../inc/customizer-config.php:273
+msgid "How many words to display per excerpt"
+msgstr ""
+
+#: ../inc/customizer-config.php:282
+msgid "Entry Thumbnail"
+msgstr ""
+
+#: ../inc/customizer-config.php:291
+msgid "Entry Category Tag"
+msgstr ""
+
+#: ../inc/customizer-config.php:300 ../inc/customizer-config.php:374
+msgid "Display First Category Only"
+msgstr ""
+
+#: ../inc/customizer-config.php:309
+msgid "Entry Meta"
+msgstr ""
+
+#: ../inc/customizer-config.php:318
+msgid "Entry Meta Date"
+msgstr ""
+
+#: ../inc/customizer-config.php:328
+msgid "Entry Meta Author"
+msgstr ""
+
+#: ../inc/customizer-config.php:338
+msgid "Entry Meta Comments"
+msgstr ""
+
+#: ../inc/customizer-config.php:349 ../inc/customizer-config.php:618
+msgid "Posts"
+msgstr ""
+
+#: ../inc/customizer-config.php:356
+msgid "Post Thumbnail"
+msgstr ""
+
+#: ../inc/customizer-config.php:365
+msgid "Post Category Tag"
+msgstr ""
+
+#: ../inc/customizer-config.php:383
+msgid "Post Meta"
+msgstr ""
+
+#: ../inc/customizer-config.php:392
+msgid "Post Meta Date"
+msgstr ""
+
+#: ../inc/customizer-config.php:402
+msgid "Post Meta Author"
+msgstr ""
+
+#: ../inc/customizer-config.php:412
+msgid "Post Meta Comments"
+msgstr ""
+
+#: ../inc/customizer-config.php:422
+msgid "Post Tags"
+msgstr ""
+
+#: ../inc/customizer-config.php:431
+msgid "Post Social Share"
+msgstr ""
+
+#: ../inc/customizer-config.php:440
+msgid "Post Author Box"
+msgstr ""
+
+#: ../inc/customizer-config.php:449
+msgid "Post Next/Previous"
+msgstr ""
+
+#: ../inc/customizer-config.php:458
+msgid "Post Next/Previous From Same Category"
+msgstr ""
+
+#: ../inc/customizer-config.php:468
+msgid "Post Related"
+msgstr ""
+
+#: ../inc/customizer-config.php:477
+msgid "Post Related: Displays?"
+msgstr ""
+
+#: ../inc/customizer-config.php:480
+msgid "Recent From Same Category"
+msgstr ""
+
+#: ../inc/customizer-config.php:481
+msgid "Random Posts"
+msgstr ""
+
+#: ../inc/customizer-config.php:490
+msgid "Post Related: Heading"
+msgstr ""
+
+#: ../inc/customizer-config.php:500
+msgid "Post Related: Columns"
+msgstr ""
+
+#: ../inc/customizer-config.php:516
+msgid "Post Related: Count"
+msgstr ""
+
+#: ../inc/customizer-config.php:528
+msgid "Advertisements"
+msgstr ""
+
+#: ../inc/customizer-config.php:535
+msgid "Footer"
+msgstr ""
+
+#: ../inc/customizer-config.php:545
+msgid "Discussion"
+msgstr ""
+
+#: ../inc/customizer-config.php:552
+msgid "Comments For Pages"
+msgstr ""
+
+#: ../inc/customizer-config.php:561
+msgid "Comments For Posts"
+msgstr ""
+
+#: ../inc/customizer-config.php:572
+msgid "Image Sizes"
+msgstr ""
+
+#: ../inc/customizer-config.php:579 ../inc/customizer-config.php:619
+#: ../inc/customizer-config.php:659
+msgid ""
+"If you alter any image sizes you will have to regenerate your thumbnails."
+msgstr ""
+
+#: ../inc/customizer-config.php:587 ../inc/customizer-config.php:627
+#: ../inc/customizer-config.php:667
+msgid "Image Width"
+msgstr ""
+
+#: ../inc/customizer-config.php:597 ../inc/customizer-config.php:637
+#: ../inc/customizer-config.php:677
+msgid "Image Height"
+msgstr ""
+
+#: ../inc/customizer-config.php:607 ../inc/customizer-config.php:647
+#: ../inc/customizer-config.php:687
+msgid "Crop"
+msgstr ""
+
+#: ../inc/customizer-config.php:658
+msgid "Related Posts"
+msgstr ""
+
+#: ../inc/dashboard-feed.php:9
+msgid "WPExplorer Blog"
+msgstr ""
+
+#: ../inc/dashboard-feed.php:10
+msgid "Web Design Blog"
+msgstr ""
+
+#: ../inc/meta-pages.php:55
+msgid "Page Settings"
+msgstr ""
+
+#: ../inc/meta-pages.php:90
+msgid "Layout"
+msgstr ""
+
+#: ../inc/meta-posts.php:55
+msgid "Post Settings"
+msgstr ""
+
+#: ../inc/meta-posts.php:80
+msgid "Video"
+msgstr ""
+
+#: ../inc/meta-posts.php:82 ../inc/meta-posts.php:91
+msgid ""
+"Enter your embed code or enter in a URL that is compatible with WordPress's "
+"built-in oEmbed function or self-hosted video function."
+msgstr ""
+
+#: ../inc/meta-posts.php:89
+msgid "Audio"
+msgstr ""
+
+#: ../inc/welcome.php:52 ../inc/welcome.php:53
+msgid "Theme"
+msgstr ""
+
+#: ../inc/welcome.php:91
+msgid "A free WordPress theme by WPExplorer"
+msgstr ""
+
+#: ../inc/welcome.php:91
+msgid "Changelog"
+msgstr ""
+
+#: ../inc/welcome.php:91
+msgid "Theme Page"
+msgstr ""
+
+#: ../inc/welcome.php:91
+msgid "More Themes"
+msgstr ""
+
+#: ../inc/welcome.php:95
+msgid "About"
+msgstr ""
+
+#: ../inc/welcome.php:99
+msgid "GPL License"
+msgstr ""
+
+#: ../inc/welcome.php:100
+msgid ""
+"This theme is licensed under the GPL license. This means you can use it for "
+"anything you like as long as it remains GPL."
+msgstr ""
+
+#: ../inc/welcome.php:104
+msgid "Credits"
+msgstr ""
+
+#: ../inc/welcome.php:106
+msgid "This theme was created by:"
+msgstr ""
+
+#: ../inc/welcome.php:108
+msgid "We work hard to develop, support and update this theme."
+msgstr ""
+
+#: ../inc/welcome.php:110
+msgid ""
+"A back-link to our website is very much appreciated or you can follow us via "
+"our social media!"
+msgstr ""
+
+#: ../inc/welcome.php:120
+msgid "Liability"
+msgstr ""
+
+#: ../inc/welcome.php:122
+msgid ""
+"WPExplorer.com shall not be held liable for any damages, including, but not "
+"limited to, the loss of data or profit, arising from the use of, or "
+"inability to use, this theme."
+msgstr ""
+
+#: ../inc/welcome.php:128
+msgid "Getting Started"
+msgstr ""
+
+#: ../inc/welcome.php:134
+msgid ""
+"Below you will find some useful links to get you started with this theme."
+msgstr ""
+
+#: ../inc/welcome.php:144
+msgid "Customize Your Site"
+msgstr ""
+
+#: ../inc/welcome.php:149
+msgid "Recommendations"
+msgstr ""
+
+#: ../inc/welcome.php:154
+msgid "Plugins"
+msgstr ""
+
+#: ../inc/welcome.php:155
+msgid ""
+"Below you will find links to plugins we (WPExplorer.com staff) personally "
+"like and recommend. None of these plugins are required for your theme to "
+"work, they simply add additional functionality."
+msgstr ""
+
+#: ../inc/welcome.php:171
+msgid "Total Drag & Drop Theme"
+msgstr ""
+
+#: ../inc/welcome.php:172
+msgid ""
+"Check out our most advanced (yet easy to use) and flexible theme to date."
+msgstr ""
+
+#: ../inc/welcome.php:180
+msgid "WordPress Hosting"
+msgstr ""
+
+#: ../inc/welcome.php:181
+msgid ""
+"If you need fast and reliable hosting we recommend the same host we use and "
+"love WPEngine."
+msgstr ""
+
+#: ../inc/welcome.php:189
+msgid "Deals & Coupons"
+msgstr ""
+
+#: ../inc/welcome.php:190
+msgid "Check out our coupons page for great deals on WordPress resources."
+msgstr ""
+
+#: ../partials/archives/author-entry.php:28
+#: ../partials/archives/author-entry.php:36
+msgid "Posts by"
+msgstr ""
+
+#: ../partials/archives/header.php:40
+msgid "Search Results "
+msgstr ""
+
+#: ../partials/archives/header.php:60
+#, php-format
+msgid "You searched for: %s"
+msgstr ""
+
+#: ../partials/entry/content.php:28
+msgid ""
+"This post is password protected you will need a password to access the "
+"article."
+msgstr ""
+
+#: ../partials/entry/meta.php:89 ../partials/post/meta.php:94
+msgid "% Comments"
+msgstr ""
+
+#: ../partials/entry/none.php:16
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../partials/entry/none.php:20
+msgid "Sorry, but nothing matched your search terms."
+msgstr ""
+
+#: ../partials/entry/none.php:24
+msgid "There aren't any posts currently published in this category."
+msgstr ""
+
+#: ../partials/entry/none.php:28
+msgid "There aren't any posts currently published under this taxonomy."
+msgstr ""
+
+#: ../partials/entry/none.php:32
+msgid "There aren't any posts currently published under this tag."
+msgstr ""
+
+#: ../partials/entry/none.php:37
+msgid "Unfortunately, the page you are looking for does not exist."
+msgstr ""
+
+#: ../partials/entry/none.php:41
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for."
+msgstr ""
+
+#: ../partials/global/author-bio.php:39
+#, php-format
+msgid "Written by %s"
+msgstr ""
+
+#: ../partials/global/edit.php:24
+msgid "Edit This Page"
+msgstr ""
+
+#: ../partials/global/edit.php:26
+msgid "Edit This Article"
+msgstr ""
+
+#: ../partials/global/pagination.php:70
+msgid "Newer Entries"
+msgstr ""
+
+#: ../partials/global/pagination.php:71
+msgid "Older Entries"
+msgstr ""
+
+#: ../partials/global/scrolltop.php:17
+msgid "Top"
+msgstr ""
+
+#: ../partials/post/author.php:22
+msgid "Article written by"
+msgstr ""
+
+#: ../partials/post/author.php:22 ../partials/post/author.php:28
+msgid "Visit Author Page"
+msgstr ""
+
+#: ../partials/post/navigation.php:19
+msgid "Next Article"
+msgstr ""
+
+#: ../partials/post/navigation.php:20
+msgid "Previous Article"
+msgstr ""
+
+#: ../partials/post/related.php:86
+msgid "You May Also Like"
+msgstr ""
+
+#: ../partials/post/share.php:29
+msgid "Share on Twitter"
+msgstr ""
+
+#: ../partials/post/share.php:30
+msgid "Tweet"
+msgstr ""
+
+#: ../partials/post/share.php:35
+msgid "Share on Facebook"
+msgstr ""
+
+#: ../partials/post/share.php:36
+msgid "Share"
+msgstr ""
+
+#: ../partials/post/share.php:41
+msgid "Share on Pinterest"
+msgstr ""
+
+#: ../partials/post/share.php:42
+msgid "Pin it"
+msgstr ""
+
+#: ../partials/post/share.php:47 ../partials/post/share.php:48
+msgid "Comment"
+msgstr ""
+
+#: ../partials/post/tags.php:23
+msgid "Tagged"
+msgstr ""
