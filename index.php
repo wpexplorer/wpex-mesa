@@ -30,17 +30,11 @@ get_header(); ?>
 		// Check if posts exist
 		if ( have_posts() ) : ?>
 
-			<div class="wpex-entries wpex-row wpex-clr">   
+			<div class="wpex-entries wpex-row wpex-clr">
 
 				<?php
 				// Set counter
 				$wpex_count = 0;
-
-				// Get query
-				global $wp_query;
-
-				// Get featured post ID
-				$featured_post = wpex_get_featured_post( $wp_query );
 
 				// Loop through posts
 				while ( have_posts() ) : the_post();

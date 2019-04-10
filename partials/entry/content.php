@@ -31,7 +31,6 @@ if ( is_front_page() ) {
 
 		<?php
 		if ( $elength = wpex_get_entry_excerpt_length() ) {
-			echo $elength;
 			wpex_excerpt( $elength, false );
 		} ?>
 

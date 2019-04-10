@@ -495,7 +495,7 @@ function wpex_excerpt( $length = 45, $readmore = false ) {
 	global $post;
 
 	// Check for custom excerpt
-	if ( has_excerpt( $post->ID ) ) {
+	if ( ! empty( $post->post_excerpt ) && ! ctype_space( $post->post_excerpt ) ) {
 		$output = $post->post_excerpt;
 	}
 

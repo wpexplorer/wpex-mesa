@@ -13,7 +13,7 @@
 
 	<?php if ( is_home() && current_user_can( 'publish_posts' ) ) { ?>
 
-		<p><?php printf( esc_html__( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'wpex-mesa' ), admin_url( 'post-new.php' ) ); ?></p>
+		<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'wpex-mesa' ), admin_url( 'post-new.php' ) ); ?></p>
 
 	<?php } elseif ( is_search() ) { ?>
 
@@ -32,7 +32,7 @@
 		<p><?php esc_html_e( 'There aren\'t any posts currently published under this tag.', 'wpex-mesa' ); ?></p>
 
 	<?php } elseif ( is_404() ) { ?>
-	
+
 		<h1>404</h1>
 		<p><?php esc_html_e( 'Unfortunately, the page you are looking for does not exist.', 'wpex-mesa' ); ?></p>
 
