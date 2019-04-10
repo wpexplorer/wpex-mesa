@@ -40,7 +40,7 @@ if ( ! $is_featured_post ) {
 	$classes[] = 'wpex-featured-entry';
 } ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( $classes ); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class( $classes ); ?>>
 
 	<div class="wpex-loop-entry-inner wpex-clr">
 
@@ -92,7 +92,7 @@ if ( ! $is_featured_post ) {
 
 	</div><!-- .wpex-boxed-container -->
 
-</article><!-- .wpex-loop-entry -->
+</div><!-- .wpex-loop-entry -->
 
 <?php
 // Reset counter
