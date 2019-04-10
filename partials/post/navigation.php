@@ -16,8 +16,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Get post navigation
 $args = array(
-	'prev_text'	=> '<span>'. esc_html__( 'Next Article', 'mesa' ) .'</span><span class="fa fa-chevron-right"></span>',
-	'next_text'	=> '<span class="fa fa-chevron-left"></span><span>'. esc_html__( 'Previous Article', 'mesa' ) .'</span>',
+	'prev_text'	=> '<span>' . esc_html__( 'Next Article', 'wpex-mesa' ) . '</span><span class="fa fa-chevron-right" aria-hidden="true"></span>',
+	'next_text'	=> '<span class="fa fa-chevron-left" aria-hidden="true"></span><span>' . esc_html__( 'Previous Article', 'wpex-mesa' ) . '</span>',
 );
 if ( 'post' == get_post_type() && wpex_get_theme_mod( 'post_next_prev_in_same_term', false ) ) {
 	$args['in_same_term'] = true;

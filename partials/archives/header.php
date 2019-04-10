@@ -37,7 +37,7 @@ if ( is_archive() || is_search() || $home_heading ) : ?>
 
 			<?php elseif ( is_search() ) : ?>
 
-				<?php esc_html_e( 'Search Results ', 'mesa' ); ?>
+				<?php esc_html_e( 'Search Results ', 'wpex-mesa' ); ?>
 
 			<?php elseif ( is_category() || is_tag() ) : ?>
 
@@ -57,7 +57,7 @@ if ( is_archive() || is_search() || $home_heading ) : ?>
 
 			<div class="wpex-term-description wpex-clr">
 
-				<?php printf( esc_html__( 'You searched for: %s', 'mesa' ), '<span>'. get_search_query() .'</span>' ); ?>
+				<?php printf( esc_html__( 'You searched for: %s', 'wpex-mesa' ), '<span>'. get_search_query() .'</span>' ); ?>
 
 			</div><!-- #wpex-term-description -->
 

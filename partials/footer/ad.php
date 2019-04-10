@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$default = '<a href="http://themeforest.net/item/mesa-responsive-wordpress-blog-shop-theme/13434670?ref=WPExplorer" target="_blank"><img src="'. get_template_directory_uri() .'/images/banner.jpg" /></a>';
+$default = '<a href="https://themeforest.net/item/new-york-wordpress-blog-shop-theme/19185945?ref=WPExplorer" target="_blank" rel="noopener nofollow"><img src="'. get_template_directory_uri() .'/images/banner.jpg" /></a>';
 if ( $ad = wpex_get_theme_mod( 'ad_footer', $default ) ) : ?>
 	<div class="wpex-footer-ad wpex-container wpex-clr">
 		<div class="wpex-footer-ad-inner wpex-clr"><?php echo $ad; ?></div>

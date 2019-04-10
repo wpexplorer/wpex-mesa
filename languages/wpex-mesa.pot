@@ -1,8 +1,9 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Mesa WordPress Theme\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-29 15:50-0800\n"
+"POT-Creation-Date: 2019-04-09 18:42-0700\n"
 "PO-Revision-Date: 2016-04-29 15:50-0800\n"
 "Last-Translator: AJ Clarke <wpexplorer@gmail.com>\n"
 "Language-Team: WPExplorer.com\n"
@@ -10,12 +11,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-KeywordsList: esc_html_e;gettext;gettext_noop;__;_e;_n;_nx;"
-"esc_html__\n"
+"esc_html__;esc_attr__;esc_attr_e;esc_html_e\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 2.2.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
+
+#: ../admin/dashboard-feed.php:9
+msgid "WordPress Articles"
+msgstr ""
 
 #: ../comments.php:32 ../partials/entry/meta.php:89
 #: ../partials/post/meta.php:94
@@ -47,82 +52,78 @@ msgstr ""
 msgid "Comments are now closed."
 msgstr ""
 
-#: ../functions.php:156
+#: ../functions.php:150
 msgid "Main"
 msgstr ""
 
-#: ../functions.php:281
+#: ../functions.php:275
 msgid "Menu"
 msgstr ""
 
-#: ../functions.php:298
+#: ../functions.php:292
 msgid "Sidebar - Main"
 msgstr ""
 
-#: ../functions.php:308
+#: ../functions.php:302
 msgid "Sidebar - Pages"
 msgstr ""
 
-#: ../functions.php:441
+#: ../functions.php:435
 msgid "Highlight"
 msgstr ""
 
-#: ../functions.php:446
+#: ../functions.php:440
 msgid "Buttons"
 msgstr ""
 
-#: ../functions.php:449 ../functions.php:494 ../inc/core-functions.php:54
+#: ../functions.php:443 ../functions.php:488 ../inc/core-functions.php:54
 #: ../inc/customizer-config.php:25 ../inc/customizer-config.php:34
 #: ../inc/meta-pages.php:82
 msgid "Default"
 msgstr ""
 
-#: ../functions.php:454
+#: ../functions.php:448
 msgid "Red"
 msgstr ""
 
-#: ../functions.php:459
+#: ../functions.php:453
 msgid "Green"
 msgstr ""
 
-#: ../functions.php:464
+#: ../functions.php:458
 msgid "Blue"
 msgstr ""
 
-#: ../functions.php:469
+#: ../functions.php:463
 msgid "Orange"
 msgstr ""
 
-#: ../functions.php:474
+#: ../functions.php:468
 msgid "Black"
 msgstr ""
 
-#: ../functions.php:479
+#: ../functions.php:473
 msgid "White"
 msgstr ""
 
-#: ../functions.php:484
+#: ../functions.php:478
 msgid "Clean"
 msgstr ""
 
-#: ../functions.php:491
+#: ../functions.php:485
 msgid "Notices"
 msgstr ""
 
-#: ../functions.php:499
+#: ../functions.php:493
 msgid "Info"
 msgstr ""
 
-#: ../functions.php:504
+#: ../functions.php:498
 msgid "Warning"
 msgstr ""
 
-#: ../functions.php:509
+#: ../functions.php:503
 msgid "Success"
-msgstr ""
-
-#: ../searchform.php:13
-msgid "Search"
 msgstr ""
 
 #: ../inc/core-functions.php:55
@@ -484,14 +485,6 @@ msgstr ""
 msgid "Related Posts"
 msgstr ""
 
-#: ../inc/dashboard-feed.php:9
-msgid "WPExplorer Blog"
-msgstr ""
-
-#: ../inc/dashboard-feed.php:10
-msgid "Web Design Blog"
-msgstr ""
-
 #: ../inc/meta-pages.php:55
 msgid "Page Settings"
 msgstr ""
@@ -516,129 +509,6 @@ msgstr ""
 
 #: ../inc/meta-posts.php:89
 msgid "Audio"
-msgstr ""
-
-#: ../inc/welcome.php:52 ../inc/welcome.php:53
-msgid "Theme"
-msgstr ""
-
-#: ../inc/welcome.php:91
-msgid "A free WordPress theme by WPExplorer"
-msgstr ""
-
-#: ../inc/welcome.php:91
-msgid "Changelog"
-msgstr ""
-
-#: ../inc/welcome.php:91
-msgid "Theme Page"
-msgstr ""
-
-#: ../inc/welcome.php:91
-msgid "More Themes"
-msgstr ""
-
-#: ../inc/welcome.php:95
-msgid "About"
-msgstr ""
-
-#: ../inc/welcome.php:99
-msgid "GPL License"
-msgstr ""
-
-#: ../inc/welcome.php:100
-msgid ""
-"This theme is licensed under the GPL license. This means you can use it for "
-"anything you like as long as it remains GPL."
-msgstr ""
-
-#: ../inc/welcome.php:104
-msgid "Credits"
-msgstr ""
-
-#: ../inc/welcome.php:106
-msgid "This theme was created by:"
-msgstr ""
-
-#: ../inc/welcome.php:108
-msgid "We work hard to develop, support and update this theme."
-msgstr ""
-
-#: ../inc/welcome.php:110
-msgid ""
-"A back-link to our website is very much appreciated or you can follow us via "
-"our social media!"
-msgstr ""
-
-#: ../inc/welcome.php:120
-msgid "Liability"
-msgstr ""
-
-#: ../inc/welcome.php:122
-msgid ""
-"WPExplorer.com shall not be held liable for any damages, including, but not "
-"limited to, the loss of data or profit, arising from the use of, or "
-"inability to use, this theme."
-msgstr ""
-
-#: ../inc/welcome.php:128
-msgid "Getting Started"
-msgstr ""
-
-#: ../inc/welcome.php:134
-msgid ""
-"Below you will find some useful links to get you started with this theme."
-msgstr ""
-
-#: ../inc/welcome.php:144
-msgid "Customize Your Site"
-msgstr ""
-
-#: ../inc/welcome.php:149
-msgid "Recommendations"
-msgstr ""
-
-#: ../inc/welcome.php:154
-msgid "Plugins"
-msgstr ""
-
-#: ../inc/welcome.php:155
-msgid ""
-"Below you will find links to plugins we (WPExplorer.com staff) personally "
-"like and recommend. None of these plugins are required for your theme to "
-"work, they simply add additional functionality."
-msgstr ""
-
-#: ../inc/welcome.php:171
-msgid "Total Drag & Drop Theme"
-msgstr ""
-
-#: ../inc/welcome.php:172
-msgid ""
-"Check out our most advanced (yet easy to use) and flexible theme to date."
-msgstr ""
-
-#: ../inc/welcome.php:180
-msgid "WordPress Hosting"
-msgstr ""
-
-#: ../inc/welcome.php:181
-msgid ""
-"If you need fast and reliable hosting we recommend the same host we use and "
-"love WPEngine."
-msgstr ""
-
-#: ../inc/welcome.php:189
-msgid "Deals & Coupons"
-msgstr ""
-
-#: ../inc/welcome.php:190
-msgid "Check out our coupons page for great deals on WordPress resources."
-msgstr ""
-
-#: ../partials/archives/author-entry.php:28
-#: ../partials/archives/author-entry.php:36
-msgid "Posts by"
 msgstr ""
 
 #: ../partials/archives/header.php:40
@@ -765,4 +635,8 @@ msgstr ""
 
 #: ../partials/post/tags.php:23
 msgid "Tagged"
+msgstr ""
+
+#: ../searchform.php:13
+msgid "Search"
 msgstr ""

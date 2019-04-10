@@ -25,16 +25,20 @@ if ( is_front_page() ) {
 
 	<?php if ( post_password_required() ) : ?>
 
-		<?php esc_html_e( 'This post is password protected you will need a password to access the article.', 'mesa' ); ?>
+		<?php esc_html_e( 'This post is password protected you will need a password to access the article.', 'wpex-mesa' ); ?>
 
 	<?php elseif ( 'content' != $display && 'quote' != get_post_format() && wpex_has_custom_excerpt() ) : ?>
 
-		<?php wpex_excerpt( wpex_get_entry_excerpt_length(), false ); ?>
+		<?php
+		if ( $elength = wpex_get_entry_excerpt_length() ) {
+			echo $elength;
+			wpex_excerpt( $elength, false );
+		} ?>
 
 	<?php else : ?>
 
 	   <?php the_content(); ?>
-	   
+
 	<?php endif; ?>
 
 </div><!--.wpex-loop-entry-excerpt -->

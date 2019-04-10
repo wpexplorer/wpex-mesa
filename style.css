@@ -1,19 +1,20 @@
 /*------------------------------------------------------------------
 
- Theme Name: Mesa
- Version: 1.0.0
+ Theme Name: WPEX Mesa
+ Version: 1.1
  Description: Mesa WordPress blogging Theme with WooCommerce support
  Author: WPExplorer
- Author URI: http://www.wpexplorer.com
- Theme URI: http://www.wpexplorer.com/
+ Author URI: https://www.wpexplorer.com/
+ Theme URI: https://www.wpexplorer.com/mesa-free-wordpress-theme/
  License: Custom license
  License URI: http://themeforest.net/licenses/terms/regular
- Tags: responsive-layout, custom-background, threaded-comments, custom-menu, featured-images, full-width-template, theme-options, translation-ready
+ Tags: custom-background, threaded-comments, custom-menu, featured-images, full-width-template, theme-options, translation-ready
+ Text Domain: wpex-mesa
 
 /*------------------------------------------------------------------
 [# Reset]
 -------------------------------------------------------------------*/
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;font:inherit;vertical-align:baseline;font-family:inherit;font-size:100%;font-style:inherit;font-weight:inherit;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}html{font-size:62.5%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}body{background:#fff;line-height:1;}article,aside,details,figcaption,figure,footer,header,main,nav,section{display:block}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0;}caption,th,td{font-weight:normal;text-align:left;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}blockquote,q{quotes:none}a:focus{outline:0}a:hover,a:active{outline:0}a img{border:0}img{max-width:100%;height:auto;}select{max-width:100%}input,select,textarea,button{font-family:inherit}
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;font:inherit;vertical-align:baseline;font-family:inherit;font-style:inherit;font-weight:inherit;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}html{font-size:62.5%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}body{background:#fff;line-height:1;}article,aside,details,figcaption,figure,footer,header,main,nav,section{display:block}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0;}caption,th,td{font-weight:normal;text-align:left;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}blockquote,q{quotes:none}a:hover,a:active{outline:0}a img{border:0}img{max-width:100%;height:auto;}select{max-width:100%}
 
 /*------------------------------------------------------------------
 [# Grid]
@@ -50,6 +51,7 @@ body { background: #fff; color: #555; font: 400 16px/1.6 'Roboto', Arial; -webki
 body.full-width .wpex-content-area { width: 100%; max-width: none; padding: 0; }
 body.left-sidebar .wpex-content-area { float: right }
 body.left-sidebar .wpex-sidebar { float: left }
+.skip-link.screen-reader-text:focus { font-size: 13px; }
 
 /*------------------------------------------------------------------
 [# Commons]
@@ -60,7 +62,7 @@ body.left-sidebar .wpex-sidebar { float: left }
 
 /* Text meant only for screen readers. */
 .screen-reader-text { clip: rect(1px, 1px, 1px, 1px); position: absolute !important; height: 1px; width: 1px; overflow: hidden; }
-.screen-reader-text:focus { background-color: #f1f1f1; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); clip: auto !important; color: #21759b; display: block; font-size: 14px; font-size: 0.875rem; font-weight: bold; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; 
+.screen-reader-text:focus { background-color: #f1f1f1; border-radius: 3px; box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.4); clip: auto !important; color: #21759b; display: block; font-size: 14px; font-size: 0.875rem; font-weight: bold; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000;
 /* Above WP toolbar. */ }
 
 /*clear floats*/
@@ -162,25 +164,20 @@ iframe, embed, frame { max-width: 100%; }
 [# Forms, Inputs & Buttons]
 -------------------------------------------------------------------*/
 
-/*reset focus outline*/
-*:focus { outline: 0 }
-
 /*inputs*/
 input[type="text"],
 input[type="password"],
 input[type="email"],
 input[type="url"],
 input[type="tel"],
-textarea { background: none; border: 0; background: #eee; color: #585858; border-radius: 0; color: inherit; display: block; margin: 0; max-width: 100%; padding: 0.65em; font-size: 1em; font-weight: inherit; -webkit-appearance: none; box-shadow: none; line-height: 1; box-shadow: none; }
+textarea { font-size: 1em; background: none; border: 1px solid #ddd; background: none; color: #585858; border-radius: 0; color: inherit; display: block; margin: 0; max-width: 100%; padding: 0.65em; font-size: 1em; font-weight: inherit; -webkit-appearance: none; box-shadow: none; line-height: 1; box-shadow: none; }
 textarea { width: 100%; line-height: inherit; }
-input:-webkit-autofill { -webkit-box-shadow: 0 0 0px 1000px #fff inset }
-input:-webkit-autofill:focus { -webkit-box-shadow: 0 0 0px 1000px #fff inset }
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
 input[type="tel"]:focus,
-textarea:focus { outline: none !important; }
+textarea:focus { outline: none !important; border-color: #ccc; }
 
 /*placeholder text*/
 ::-webkit-input-placeholder { color: #585858; }
@@ -236,7 +233,6 @@ strong { font-weight: bold; }
 .wpex-entry strong { color: #333; }
 small { font-size: 80% }
 hr { border: solid #eee; border-width: 1px 0 0; clear: both; height: 0; margin: 40px 0; }
-a { outline: 0 }
 
 /*archives header*/
 .wpex-archive-header { margin-top: -5px; position: relative; margin-bottom: 40px; text-align: center; }
@@ -272,7 +268,8 @@ a { outline: 0 }
 .wpex-dropdown-menu ul { visibility: hidden; opacity: 0; position: absolute; top: 100%; z-index: 9999; margin: 0; white-space: nowrap; transition: 0.35s all; -moz-transition: 0.35s all -webkit-transition: 0.35s all; }
 .wpex-dropdown-menu > li { float: left; display: block; }
 .wpex-dropdown-menu li:hover > ul,
-.wpex-dropdown-menu li.wpex-touched > ul { margin: 0; visibility: visible; opacity: 1; }
+.wpex-dropdown-menu li.wpex-touched > ul,
+.wpex-dropdown-menu li.focus > ul { margin: 0; visibility: visible; opacity: 1; }
 .wpex-dropdown-menu a { display: block; position: relative; }
 .wpex-dropdown-menu ul li { display: block; float: none; position: relative; }
 .wpex-dropdown-menu ul li a { display: block }
@@ -300,7 +297,7 @@ a { outline: 0 }
 .wpex-site-nav .wpex-dropdown-menu > li.current-menu-ancestor > a { background-color: #222; color: #fff; text-decoration: none; border-color: transparent; }
 
 .wpex-site-nav .wpex-dropdown-menu .sub-menu { background: #222; padding: 5px 0; text-align: left; }
-.wpex-site-nav .wpex-dropdown-menu .sub-menu ul { top: -6px; }
+.wpex-site-nav .wpex-dropdown-menu .sub-menu ul { top: -5px; }
 .wpex-site-nav .wpex-dropdown-menu .sub-menu li { margin: 0; height: auto; line-height: 1.5; }
 .wpex-site-nav .wpex-dropdown-menu .sub-menu > li:last-child { border-bottom: 0 }
 .wpex-site-nav .wpex-dropdown-menu .sub-menu a { text-transform: none; font-weight: 500; padding: 5px 15px; border: none; color: #999; }
@@ -560,12 +557,8 @@ a.wpex-site-scroll-top:hover { background: #333; color: #fff; }
 /*------------------------------------------------------------------
 [# Site Searchform]
 -------------------------------------------------------------------*/
-.wpex-site-searchform { position: relative }
-.wpex-site-searchform input[type="search"] { font-family: Georgia; background: #333; color: #fff; border: none; outline: none; padding-left: 12px; padding-right: 50px; height: 38px; width: 100%; font-size: 13px; transition: 0.2s all ease-in-out; font-weight: 400; }
-.wpex-site-searchform button { background: none; color: #ddd; position: absolute; right: 0; top: 0; width: 40px; height: 38px; line-height: 38px; text-align: center; display: block; border: 0; outline: none; padding: 0; font-size: 13px; }
-.wpex-site-footer .wpex-site-searchform button { background: #222; color: #fff; border-color: transparent; }
-.wpex-site-searchform input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none }
-.wpex-site-searchform input[type="search"]::-webkit-search-decoration { display: none }
+.wpex-site-searchform input[type="search"] { font-size: 1em; width: 80%; float: left; height: 38px; outline: 0; border: 1px solid #ccc; padding: 0.6em; }
+.wpex-site-searchform button { display: block; width: 20%; float: right; background: #222; color: #ddd; height: 38px; line-height: 38px; text-align: center; border: 0; outline: none; padding: 0; font-size: 1em; }
 
 /*------------------------------------------------------------------
 [# Advertisements]

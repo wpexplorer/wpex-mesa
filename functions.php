@@ -22,13 +22,12 @@
  * @since     1.0.0
  */
 
-// Theme info
-function wpex_get_theme_info() {
+function wpex_theme_info() {
 	return array(
-		'name'      => 'Mesa',
-		'dir'       => get_template_directory_uri() .'/inc/',
-		'url'       => 'http://www.wpexplorer.com/mesa-free-wordpress-theme/',
-		'changelog' => 'http://www.wpexplorer.com/changelogs/mesa/',
+		'name'    => 'WPEX Mesa',
+		'slug'    => 'wpex-mesa',
+		'url'     => 'https://www.wpexplorer.com/mesa-free-wordpress-theme/',
+		'support' => 'https://github.com/wpexplorer/wpex-mesa/issues',
 	);
 }
 
@@ -45,11 +44,6 @@ class WPEX_Mesa_Theme_Setup {
 		// Paths
 		$this->template_dir     = get_template_directory();
 		$this->template_dir_uri = get_template_directory_uri();
-
-		// Auto updates
-		if ( is_admin() ) {
-			require_once( $this->template_dir .'/inc/updates.php' );
-		}
 
 		// Tweak excerpt more text
 		add_filter( 'excerpt_more', array( $this, 'excerpt_more' ) );
@@ -119,11 +113,11 @@ class WPEX_Mesa_Theme_Setup {
 		require_once( $this->template_dir .'/inc/meta-posts.php' );
 
 		if ( is_admin() ) {
-			if ( ! defined( 'WPEX_DISABLE_THEME_ABOUT_PAGE' ) ) {
-				require_once( $this->template_dir .'/inc/dashboard-feed.php' );
-			}
 			if ( ! defined( 'WPEX_DISABLE_THEME_DASHBOARD_FEEDS' ) ) {
-				require_once( $this->template_dir .'/inc/welcome.php' );
+				require_once get_parent_theme_file_path( '/admin/dashboard-feed.php' );
+			}
+			if ( ! defined( 'WPEX_DISABLE_THEME_ABOUT_PAGE' ) ) {
+				require_once get_parent_theme_file_path( '/admin/about.php' );
 			}
 		}
 
@@ -153,15 +147,15 @@ class WPEX_Mesa_Theme_Setup {
 
 		// Register navigation menus
 		register_nav_menus ( array(
-			'main' => esc_html__( 'Main', 'mesa' ),
+			'main' => esc_html__( 'Main', 'wpex-mesa' ),
 		) );
 
 		// Add editor styles
 		add_editor_style( 'css/editor-style.css' );
-		
+
 		// Localization support
-		load_theme_textdomain( 'mesa', get_template_directory() .'/languages' );
-			
+		load_theme_textdomain( 'wpex-mesa', get_template_directory() .'/languages' );
+
 		// Add theme support
 		add_theme_support( 'title-tag' );
 		add_theme_support( 'automatic-feed-links' );
@@ -256,7 +250,11 @@ class WPEX_Mesa_Theme_Setup {
 	public function theme_js() {
 
 		// Define js directory
-		$js_dir_uri = $this->template_dir_uri .'/js/';
+		$js_dir_uri = $this->template_dir_uri . '/js/';
+
+		// HTML5
+		wp_enqueue_script( 'html5shiv', $js_dir_uri . 'js/html5.js', array(), false, false );
+		wp_script_add_data( 'html5shiv', 'conditional', 'lt IE 9' );
 
 		// Comment reply
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -278,7 +276,7 @@ class WPEX_Mesa_Theme_Setup {
 		wp_enqueue_script( 'wpex-functions', $js_dir_uri .'functions.js', array( 'jquery' ), false, true );
 		wp_localize_script( 'wpex-functions', 'wpexvars', apply_filters( 'wpex_js_vars', array(
 			'isRTL'           => is_rtl(),
-			'mobileMenuLabel' => esc_html__( 'Menu', 'mesa' ),
+			'mobileMenuLabel' => esc_html__( 'Menu', 'wpex-mesa' ),
 		) ) );
 
 	}
@@ -295,7 +293,7 @@ class WPEX_Mesa_Theme_Setup {
 
 		// Sidebar
 		register_sidebar( array(
-			'name'          => esc_html__( 'Sidebar - Main', 'mesa' ),
+			'name'          => esc_html__( 'Sidebar - Main', 'wpex-mesa' ),
 			'id'            => 'sidebar',
 			'before_widget' => '<div class="wpex-sidebar-widget %2$s wpex-clr">',
 			'after_widget'  => '</div>',
@@ -305,7 +303,7 @@ class WPEX_Mesa_Theme_Setup {
 
 		// Sidebar
 		register_sidebar( array(
-			'name'          => esc_html__( 'Sidebar - Pages', 'mesa' ),
+			'name'          => esc_html__( 'Sidebar - Pages', 'wpex-mesa' ),
 			'id'            => 'sidebar_pages',
 			'before_widget' => '<div class="wpex-sidebar-widget %2$s wpex-clr">',
 			'after_widget'  => '</div>',
@@ -314,7 +312,7 @@ class WPEX_Mesa_Theme_Setup {
 		) );
 
 	}
-	
+
 	/**
 	 * Adds classes to the body_class function
 	 *
@@ -390,11 +388,6 @@ class WPEX_Mesa_Theme_Setup {
 			$contactmethods['wpex_facebook'] = 'Mesa - Facebook';
 		}
 
-		// Add GoglePlus
-		if ( ! isset( $contactmethods['wpex_googleplus'] ) ) {
-			$contactmethods['wpex_googleplus'] = 'Mesa - Google+';
-		}
-
 		// Add LinkedIn
 		if ( ! isset( $contactmethods['wpex_linkedin'] ) ) {
 			$contactmethods['wpex_linkedin'] = 'Mesa - LinkedIn';
@@ -416,7 +409,7 @@ class WPEX_Mesa_Theme_Setup {
 	}
 
 	/**
-	 * Adds meta generator for 
+	 * Adds meta generator for
 	 *
 	 * @since 1.0.0
 	 * @access public
@@ -438,75 +431,75 @@ class WPEX_Mesa_Theme_Setup {
 	public static function formats( $settings ) {
 		$new_formats = array(
 			array(
-				'title'     => esc_html__( 'Highlight', 'mesa' ),
+				'title'     => esc_html__( 'Highlight', 'wpex-mesa' ),
 				'inline'    => 'span',
 				'classes'   => 'wpex-text-highlight'
 			),
 			array(
-				'title' => esc_html__( 'Buttons', 'mesa' ),
+				'title' => esc_html__( 'Buttons', 'wpex-mesa' ),
 				'items' => array(
 					array(
-						'title'     => esc_html__( 'Default', 'mesa' ),
+						'title'     => esc_html__( 'Default', 'wpex-mesa' ),
 						'selector'  => 'a',
 						'classes'   => 'wpex-theme-button'
 					),
 					array(
-						'title'     => esc_html__( 'Red', 'mesa' ),
+						'title'     => esc_html__( 'Red', 'wpex-mesa' ),
 						'selector'  => 'a',
 						'classes'   => 'wpex-theme-button red'
 					),
 					array(
-						'title'     => esc_html__( 'Green', 'mesa' ),
+						'title'     => esc_html__( 'Green', 'wpex-mesa' ),
 						'selector'  => 'a',
 						'classes'   => 'wpex-theme-button green'
 					),
 					array(
-						'title'     => esc_html__( 'Blue', 'mesa' ),
+						'title'     => esc_html__( 'Blue', 'wpex-mesa' ),
 						'selector'  => 'a',
 						'classes'   => 'wpex-theme-button blue'
 					),
 					array(
-						'title'     => esc_html__( 'Orange', 'mesa' ),
+						'title'     => esc_html__( 'Orange', 'wpex-mesa' ),
 						'selector'  => 'a',
 						'classes'   => 'wpex-theme-button orange'
 					),
 					array(
-						'title'     => esc_html__( 'Black', 'mesa' ),
+						'title'     => esc_html__( 'Black', 'wpex-mesa' ),
 						'selector'  => 'a',
 						'classes'   => 'wpex-theme-button black'
 					),
 					array(
-						'title'     => esc_html__( 'White', 'mesa' ),
+						'title'     => esc_html__( 'White', 'wpex-mesa' ),
 						'selector'  => 'a',
 						'classes'   => 'wpex-theme-button white'
 					),
 					array(
-						'title'     => esc_html__( 'Clean', 'mesa' ),
+						'title'     => esc_html__( 'Clean', 'wpex-mesa' ),
 						'selector'  => 'a',
 						'classes'   => 'wpex-theme-button clean'
 					),
 				),
 			),
 			array(
-				'title' => esc_html__( 'Notices', 'mesa' ),
+				'title' => esc_html__( 'Notices', 'wpex-mesa' ),
 				'items' => array(
 					array(
-						'title'     => esc_html__( 'Default', 'mesa' ),
+						'title'     => esc_html__( 'Default', 'wpex-mesa' ),
 						'block'     => 'div',
 						'classes'   => 'wpex-notice'
 					),
 					array(
-						'title'     => esc_html__( 'Info', 'mesa' ),
+						'title'     => esc_html__( 'Info', 'wpex-mesa' ),
 						'block'     => 'div',
 						'classes'   => 'wpex-notice wpex-info'
 					),
 					array(
-						'title'     => esc_html__( 'Warning', 'mesa' ),
+						'title'     => esc_html__( 'Warning', 'wpex-mesa' ),
 						'block'     => 'div',
 						'classes'   => 'wpex-notice wpex-warning'
 					),
 					array(
-						'title'     => esc_html__( 'Success', 'mesa' ),
+						'title'     => esc_html__( 'Success', 'wpex-mesa' ),
 						'block'     => 'div',
 						'classes'   => 'wpex-notice wpex-success'
 					),

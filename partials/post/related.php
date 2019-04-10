@@ -7,7 +7,6 @@
  * @copyright Copyright (c) 2015, WPExplorer.com
  * @link      http://www.wpexplorer.com
  * @since     1.0.0
- * @version   1.0.1
  */
 
 // Exit if accessed directly
@@ -83,7 +82,7 @@ if ( $wpex_query->have_posts() ) {
 		<?php
 		// Display heading
 		$heading = wpex_get_theme_mod( 'post_related_heading' );
-		$heading = $heading ? $heading : esc_html__( 'You May Also Like', 'mesa' );
+		$heading = $heading ? $heading : esc_html__( 'You May Also Like', 'wpex-mesa' );
 		if ( $heading ) : ?>
 			<h4 class="wpex-heading"><?php echo wpex_sanitize( $heading, 'html' ); ?></h4>
 		<?php endif; ?>
@@ -119,7 +118,7 @@ if ( $wpex_query->have_posts() ) {
 						<h3 class="wpex-related-post-title">
 							<a href="<?php the_permalink(); ?>" title="<?php wpex_esc_title(); ?>"><?php the_title(); ?></a>
 						</h3>
-						<div class="wpex-related-post-meta"><span class="fa fa-clock-o"></span><?php echo get_the_date(); ?></div>
+						<div class="wpex-related-post-meta"><span class="fa fa-clock-o" aria-hidden="true"></span><?php echo get_the_date(); ?></div>
 						</div><!-- .related-post-content -->
 				</div><!-- .related-post -->
 

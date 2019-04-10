@@ -86,7 +86,7 @@ if ( $taxonomy ) {
 			// Display comments
 			if ( 'comments' == $meta_item && comments_open() && wpex_has_comments() && ! post_password_required() ) : ?>
 
-				<li class="wpex-comments"><span class="wpex-spacer">&middot;</span><?php comments_popup_link( esc_html__( '0 Comments', 'mesa' ), esc_html__( '1 Comment',  'mesa' ), esc_html__( '% Comments', 'mesa' ), 'comments-link' ); ?></li>
+				<li class="wpex-comments"><span class="wpex-spacer">&middot;</span><?php comments_popup_link( esc_html__( '0 Comments', 'wpex-mesa' ), esc_html__( '1 Comment',  'wpex-mesa' ), esc_html__( '% Comments', 'wpex-mesa' ), 'comments-link' ); ?></li>
 
 			<?php endif; ?>
 

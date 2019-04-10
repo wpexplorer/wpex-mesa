@@ -20,7 +20,7 @@ if ( post_password_required() ) {
 } 
 
 the_tags(
-	'<div class="wpex-post-tags wpex-clr"><h4 class="wpex-heading">'. esc_html__( 'Tagged', 'mesa' ) .'</h4>',
+	'<div class="wpex-post-tags wpex-clr"><h4 class="wpex-heading">'. esc_html__( 'Tagged', 'wpex-mesa' ) .'</h4>',
 	null,
 	'</div><!-- .wpex-post-tags -->'
 ); ?>

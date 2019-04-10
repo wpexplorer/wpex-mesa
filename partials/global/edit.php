@@ -21,9 +21,9 @@ if ( ( function_exists( 'is_cart' ) && is_cart() ) || ( function_exists( 'is_che
 
 // Define text
 if ( is_page() ) {
-	$text = esc_html__( 'Edit This Page', 'mesa' );
+	$text = esc_html__( 'Edit This Page', 'wpex-mesa' );
 } else {
-	$text = esc_html__( 'Edit This Article', 'mesa' );
+	$text = esc_html__( 'Edit This Article', 'wpex-mesa' );
 }
 $text = apply_filters( 'wpex_post_edit_text', $text );
 

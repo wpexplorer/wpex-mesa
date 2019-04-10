@@ -52,7 +52,7 @@ class WPEX_Post_Meta_Settings {
 		if ( 'post' == $post_type ) {
 			add_meta_box(
 				'wpex_post_settings_metabox',
-				esc_html__( 'Post Settings', 'mesa' ),
+				esc_html__( 'Post Settings', 'wpex-mesa' ),
 				array( $this, 'render_meta_box_content' ),
 				'post',
 				'advanced',
@@ -77,18 +77,18 @@ class WPEX_Post_Meta_Settings {
 			/**** POST Video ****/
 			$value = htmlspecialchars_decode( stripslashes( get_post_meta( $post->ID, 'wpex_post_video', true ) ) );
 			echo '<tr>';
-				echo '<th><p><label for="wpex_post_layout">'. esc_html__( 'Video', 'mesa' ) .'</label></p></th>';
+				echo '<th><p><label for="wpex_post_layout">'. esc_html__( 'Video', 'wpex-mesa' ) .'</label></p></th>';
 				echo '<td><pre><textarea cols="30" rows="3" type="text" id="wpex_post_video" name="wpex_post_video"">'. $value .'</textarea></pre>';
-				echo '<small>'. esc_html__( 'Enter your embed code or enter in a URL that is compatible with WordPress\'s built-in oEmbed function or self-hosted video function.', 'mesa' ) .'</small>';
+				echo '<small>'. esc_html__( 'Enter your embed code or enter in a URL that is compatible with WordPress\'s built-in oEmbed function or self-hosted video function.', 'wpex-mesa' ) .'</small>';
 				echo '</td>';
 			echo '</tr>';
 
 			/**** POST Audio ****/
 			$value = htmlspecialchars_decode( stripslashes( get_post_meta( $post->ID, 'wpex_post_audio', true ) ) );
 			echo '<tr>';
-				echo '<th><p><label for="wpex_post_layout">'. esc_html__( 'Audio', 'mesa' ) .'</label></p></th>';
+				echo '<th><p><label for="wpex_post_layout">'. esc_html__( 'Audio', 'wpex-mesa' ) .'</label></p></th>';
 				echo '<td><pre><textarea cols="30" rows="3" type="text" id="wpex_post_audio" name="wpex_post_audio"">'. $value .'</textarea></pre>';
-				echo '<small>'. esc_html__( 'Enter your embed code or enter in a URL that is compatible with WordPress\'s built-in oEmbed function or self-hosted video function.', 'mesa' ) .'</small>';
+				echo '<small>'. esc_html__( 'Enter your embed code or enter in a URL that is compatible with WordPress\'s built-in oEmbed function or self-hosted video function.', 'wpex-mesa' ) .'</small>';
 				echo '</td>';
 			echo '</tr>';
 

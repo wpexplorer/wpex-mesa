@@ -52,7 +52,7 @@ class WPEX_Page_Meta_Settings {
 		if ( 'page' == $post_type ) {
 			add_meta_box(
 				'wpex_page_settings_metabox',
-				esc_html__( 'Page Settings', 'mesa' ),
+				esc_html__( 'Page Settings', 'wpex-mesa' ),
 				array( $this, 'render_meta_box_content' ),
 				'page',
 				'side',
@@ -79,15 +79,15 @@ class WPEX_Page_Meta_Settings {
 
 			// Layout options
 			$post_layouts = array(
-				''               => esc_html__( 'Default', 'mesa' ),
-				'right-sidebar'  => esc_html__( 'Right Sidebar', 'mesa' ),
-				'left-sidebar'   => esc_html__( 'Left Sidebar', 'mesa' ),
-				'full-width'     => esc_html__( 'No Sidebar', 'mesa' ),
+				''               => esc_html__( 'Default', 'wpex-mesa' ),
+				'right-sidebar'  => esc_html__( 'Right Sidebar', 'wpex-mesa' ),
+				'left-sidebar'   => esc_html__( 'Left Sidebar', 'wpex-mesa' ),
+				'full-width'     => esc_html__( 'No Sidebar', 'wpex-mesa' ),
 			);
 
 			// Display the form, using the current value.
 			echo '<tr>';
-				echo '<th><p><label for="wpex_post_layout">'. esc_html__( 'Layout', 'mesa' ) .'</label></p></th>';
+				echo '<th><p><label for="wpex_post_layout">'. esc_html__( 'Layout', 'wpex-mesa' ) .'</label></p></th>';
 				echo '<td><select type="text" id="wpex_post_layout" name="wpex_post_layout">';
 					foreach( $post_layouts as $key => $val ) {
 						echo '<option value="'. esc_attr( $key ) .'" '. selected( $value, $key ) .'>'. esc_attr( $val ) .'</option>';

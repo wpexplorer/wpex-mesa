@@ -77,11 +77,9 @@ function wpex_has_author_bio( $bool = true ) {
  */
 function wpex_has_custom_excerpt() {
 	$display = wpex_get_theme_mod( 'entry_content_display', 'excerpt' );
-	$length  = wpex_get_theme_mod( 'entry_excerpt_length', 45 );
-	if ( 'excerpt' == $display && $length > 0 ) {
+	$bool    = false;
+	if ( 'excerpt' == $display ) {
 		$bool = true;
-	} else {
-		$bool = false;
 	}
 	$bool = apply_filters( 'wpex_has_custom_excerpt', $bool );
 	return $bool;

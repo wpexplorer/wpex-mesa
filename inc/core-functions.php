@@ -51,17 +51,17 @@ function wpex_parse_obj_id( $id = '', $type = 'page' ) {
  */
 function wpex_image_crop_locations() {
 	return array(
-		' '             => esc_html__( 'Default', 'mesa' ),
-		'false'         => esc_html__( 'False', 'mesa' ),
-		'left-top'      => esc_html__( 'Top Left', 'mesa' ),
-		'right-top'     => esc_html__( 'Top Right', 'mesa' ),
-		'center-top'    => esc_html__( 'Top Center', 'mesa' ),
-		'left-center'   => esc_html__( 'Center Left', 'mesa' ),
-		'right-center'  => esc_html__( 'Center Right', 'mesa' ),
-		'center-center' => esc_html__( 'Center Center', 'mesa' ),
-		'left-bottom'   => esc_html__( 'Bottom Left', 'mesa' ),
-		'right-bottom'  => esc_html__( 'Bottom Right', 'mesa' ),
-		'center-bottom' => esc_html__( 'Bottom Center', 'mesa' ),
+		' '             => esc_html__( 'Default', 'wpex-mesa' ),
+		'false'         => esc_html__( 'False', 'wpex-mesa' ),
+		'left-top'      => esc_html__( 'Top Left', 'wpex-mesa' ),
+		'right-top'     => esc_html__( 'Top Right', 'wpex-mesa' ),
+		'center-top'    => esc_html__( 'Top Center', 'wpex-mesa' ),
+		'left-center'   => esc_html__( 'Center Left', 'wpex-mesa' ),
+		'right-center'  => esc_html__( 'Center Right', 'wpex-mesa' ),
+		'center-center' => esc_html__( 'Center Center', 'wpex-mesa' ),
+		'left-bottom'   => esc_html__( 'Bottom Left', 'wpex-mesa' ),
+		'right-bottom'  => esc_html__( 'Bottom Right', 'wpex-mesa' ),
+		'center-bottom' => esc_html__( 'Bottom Center', 'wpex-mesa' ),
 	);
 }
 
@@ -387,7 +387,7 @@ function wpex_check_meta_type( $value ) {
 
 /**
  * Custom menu walker
- * 
+ *
  * @link  http://codex.wordpress.org/Class_Reference/Walker_Nav_Menu
  * @since 1.0.0
  */
@@ -396,10 +396,10 @@ if ( ! class_exists( 'WPEX_Dropdown_Walker_Nav_Menu' ) ) {
 		function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
 			$id_field = $this->db_fields['id'];
 			if ( ! empty( $children_elements[$element->$id_field] ) && ( $depth == 0 ) ) {
-				$element->title .= ' <span class="fa fa-angle-down wpex-dropdown-arrow-down"></span>';
+				$element->title .= ' <span class="fa fa-angle-down wpex-dropdown-arrow-down" aria-hidden="true"></span>';
 			}
 			if ( ! empty( $children_elements[$element->$id_field] ) && ( $depth > 0 ) ) {
-				$element->title .= ' <span class="fa fa-angle-right wpex-dropdown-arrow-side"></span>';
+				$element->title .= ' <span class="fa fa-angle-right wpex-dropdown-arrow-side" aria-hidden="true"></span>';
 			}
 			Walker_Nav_Menu::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
 		}
@@ -408,7 +408,7 @@ if ( ! class_exists( 'WPEX_Dropdown_Walker_Nav_Menu' ) ) {
 
 /**
  * Custom comments callback
- * 
+ *
  * @link  http://codex.wordpress.org/Function_Reference/wp_list_comments
  * @since 1.0.0
  */
@@ -420,7 +420,7 @@ if ( ! function_exists( 'wpex_comment' ) ) {
 			case 'trackback' :
 				// Display trackbacks differently than normal comments. ?>
 				<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
-				<p><strong><?php esc_html_e( 'Pingback:', 'mesa' ); ?></strong> <?php comment_author_link(); ?></p>
+				<p><strong><?php esc_html_e( 'Pingback:', 'wpex-mesa' ); ?></strong> <?php comment_author_link(); ?></p>
 			<?php
 			break;
 			default :
@@ -441,13 +441,13 @@ if ( ! function_exists( 'wpex_comment' ) ) {
 									printf( '<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
 										esc_url( get_comment_link( $comment->comment_ID ) ),
 										get_comment_time( 'c' ),
-										sprintf( _x( '%1$s', '1: date', 'mesa' ), get_comment_date() )
+										sprintf( _x( '%1$s', '1: date', 'wpex-mesa' ), get_comment_date() )
 									); ?>
 								</span><!-- .comment-date -->
 							</header><!-- .comment-meta -->
 							<?php if ( '0' == $comment->comment_approved ) : ?>
 								<p class="comment-awaiting-moderation">
-									<?php esc_html_e( 'Your comment is awaiting moderation.', 'mesa' ); ?>
+									<?php esc_html_e( 'Your comment is awaiting moderation.', 'wpex-mesa' ); ?>
 								</p><!-- .comment-awaiting-moderation -->
 							<?php endif; ?>
 							<div class="comment-content wpex-entry wpex-clr">
@@ -457,13 +457,13 @@ if ( ! function_exists( 'wpex_comment' ) ) {
 								<?php
 								// Cancel comment link
 								comment_reply_link( array_merge( $args, array(
-									'reply_text'    => esc_html__( 'Reply', 'mesa' ) . '',
+									'reply_text'    => esc_html__( 'Reply', 'wpex-mesa' ) . '',
 									'depth'         => $depth,
 									'max_depth'     => $args['max_depth']
 								) ) ); ?>
 								<?php
 								// Edit comment link
-								edit_comment_link( esc_html__( 'Edit', 'mesa' ), '<div class="edit-comment">', '</div>' ); ?>
+								edit_comment_link( esc_html__( 'Edit', 'wpex-mesa' ), '<div class="edit-comment">', '</div>' ); ?>
 							</footer>
 						</div><!-- .comment-details -->
 					</div><!-- #comment-## -->
@@ -475,23 +475,17 @@ if ( ! function_exists( 'wpex_comment' ) ) {
 
 /**
  * Returns correct entry excerpt length
- * 
+ *
  * @since 1.0.0
  */
 function wpex_get_entry_excerpt_length() {
-	if ( is_front_page() ) {
-		$length = wpex_get_theme_mod( 'home_entry_excerpt_length', 30 );
-	} else {
-		$length = wpex_get_theme_mod( 'entry_excerpt_length', 30 );
-	}
-	$length = intval( $length ) ? intval( $length ) : 30;
-	return $length;
+	return intval( wpex_get_theme_mod( 'entry_excerpt_length', 30 ) );
 }
 
 /**
  * Custom excerpts based on wp_trim_words
  * Created for child-theming purposes
- * 
+ *
  * @link  http://codex.wordpress.org/Function_Reference/wp_trim_words
  * @since 1.0.0
  */
@@ -509,7 +503,7 @@ function wpex_excerpt( $length = 45, $readmore = false ) {
 	else {
 
 		// Redmore text
-		$readmore_text = get_theme_mod( 'entry_readmore_text', esc_html__( 'read more', 'mesa' ) );
+		$readmore_text = get_theme_mod( 'entry_readmore_text', esc_html__( 'read more', 'wpex-mesa' ) );
 
 		// Readmore link
 		$readmore_link = '<a href="'. get_permalink( $post->ID ) .'" title="'. $readmore_text .'">'. $readmore_text .'<span class="wpex-readmore-rarr">&rarr;</span></a>';
@@ -573,7 +567,7 @@ function wpex_include_template( $template ) {
 
 /**
  * List categories for specific taxonomy
- * 
+ *
  * @link    http://codex.wordpress.org/Function_Reference/wp_get_post_terms
  * @since   1.0.0
  */
@@ -614,7 +608,7 @@ if ( ! function_exists( 'wpex_get_post_terms' ) ) {
 
 		// Return first category only
 		if ( $first_only ) {
-			
+
 			$return = $return[0];
 
 		}
@@ -635,7 +629,7 @@ if ( ! function_exists( 'wpex_get_post_terms' ) ) {
 
 /**
  * Echos the wpex_list_post_terms function
- * 
+ *
  * @since 1.0.0
  */
 function wpex_post_terms( $taxonomy = 'category', $first_only = false, $classes = '' ) {
@@ -652,8 +646,6 @@ function wpex_author_has_social( $user_id = NULL ) {
 	if ( get_the_author_meta( 'wpex_twitter', $user_id ) ) {
 		return true;
 	} elseif ( get_the_author_meta( 'wpex_facebook', $user_id ) ) {
-		return true;
-	} elseif ( get_the_author_meta( 'wpex_googleplus', $user_id ) ) {
 		return true;
 	} elseif ( get_the_author_meta( 'wpex_linkedin', $user_id ) ) {
 		return true;
@@ -680,10 +672,6 @@ function wpex_header_social_options_array() {
 		'facebook' => array(
 			'label'      => 'Facebook',
 			'icon_class' => 'fa fa-facebook',
-		),
-		'googleplus' => array(
-			'label'      => 'Google Plus',
-			'icon_class' => 'fa fa-google-plus',
 		),
 		'pinterest' => array(
 			'label'      => 'Pinterest',
@@ -747,7 +735,7 @@ function wpex_header_social_options_array() {
 			'icon_class' => 'fa fa-rss',
 		),
 		'email' => array(
-			'label'      => esc_html__( 'Email', 'mesa' ),
+			'label'      => esc_html__( 'Email', 'wpex-mesa' ),
 			'icon_class' => 'fa fa-envelope',
 		),
 	);

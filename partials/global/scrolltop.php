@@ -14,4 +14,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 } ?>
 
-<a href="#" title="<?php esc_html_e( 'Top', 'mesa' ); ?>" class="wpex-site-scroll-top"><span class="fa fa-caret-up"></span></a>
+<a href="#" title="<?php esc_html_e( 'Top', 'wpex-mesa' ); ?>" class="wpex-site-scroll-top"><span class="fa fa-caret-up" aria-hidden="true"></span></a>

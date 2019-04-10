@@ -20,17 +20,11 @@ $pass_protected = post_password_required(); ?>
 <article class="wpex-post-article wpex-clr">
 
 	<?php
-	// Display post nav (next/prev)
-	if ( wpex_get_theme_mod ( 'post_next_prev', true ) ) {
-		get_template_part( 'partials/post/navigation' );
-	} ?>
-
-	<?php
 	// Display category tag
 	if ( wpex_get_theme_mod( 'post_category', true ) ) : ?>
 
 		<?php get_template_part( 'partials/post/category' ); ?>
-		
+
 	<?php endif; ?>
 
 	<?php
@@ -116,5 +110,11 @@ $pass_protected = post_password_required(); ?>
 	if ( wpex_get_theme_mod( 'comments_on_posts', true ) ) : ?>
 		<?php comments_template(); ?>
 	<?php endif; ?>
+
+	<?php
+	// Display post nav (next/prev)
+	if ( wpex_get_theme_mod ( 'post_next_prev', true ) ) {
+		get_template_part( 'partials/post/navigation' );
+	} ?>
 
 </article><!-- .wpex-port-article -->
