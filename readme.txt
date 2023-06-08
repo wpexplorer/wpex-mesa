@@ -1,3 +1,5 @@
+/*** IMPORTANT: This theme has been deprecated in exchange for our newer Block Based theme - https://wordpress.org/themes/mesa-wpex/- and will no longer receive any updates. You can continue using the theme if you wish and do anything you'd like with it. ***/
+
 === WPEX Mesa ===
 Authors: WPExplorer
 Author URI: https://www.wpexplorer.com
